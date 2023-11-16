@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Raleway:wght@300&display=swap');
+:root{
+    --Preto_Fundo: #232526;
+    --Preto_Principal: #2A3033;
+    --Branco: #FFFF;
+    --Amarelo: #FFBA08;
+
+}
+*{
+ background-color: var(--Preto_Fundo);
+ font-family: 'Inter', sans-serif;  
+ color: var(--Branco);
+ margin: 0;
+ padding: 0;
+ overflow-x: hidden;
+ overflow-y: hidden;
+}
+#Title{
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    align-items: start;
+    margin:2vh 0vh 0vh 2vh;
+   
+}
+#Title h1{
+    font-size: 3vh;
+}
+#Title a{
+    color: var(--Amarelo);
+}
+#Centralizar_Table{
+    width: 100vw;
+    height: 65vh;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+}
+#Tabela{
+    width: 90vw;
+    height: 65vh;
+    background-color: var(--Preto_Principal);
+    border-radius: 10px;
+}
+#Tabela table{
+    color: var(--Branco);
+    background-color: var(--Preto_Principal);
+    width: 100%;
+    height: 100%;
+}#Tabela table td{
+    border: 1px solid var(--Branco);
+    color: var(--Branco);
+    background-color: var(--Preto_Principal);
+    text-align: center;
+}
+.Titulo_Table{
+}
+#Buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#Buttom_Agendar button{
+    background-color: var(--Amarelo);
+    color: var(--Branco);
+    width: 9vw;
+    height: 5vh;
+    border-color: var(--Amarelo);
+    border: none;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    margin-top: 5vh;
+}
+#Buttom_Remarcar button{
+    background-color: var(--Preto_Principal);
+    color: var(--Branco);
+    width: 9vw;
+    height: 5vh;
+    border-color: var(--Preto_Principal);
+    border: none;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    margin-top: 5vh;
+}
+#Buttom_Desmarcar button{
+    background-color: var(--Preto_Principal);
+    color: var(--Branco);
+    width: 9vw;
+    height: 5vh;
+    border-color: var(--Amarelo);
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    margin-top: 5vh;
+}
