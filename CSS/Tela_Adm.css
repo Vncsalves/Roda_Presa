@@ -13,7 +13,7 @@
  margin: 0;
  padding: 0;
  overflow-x: hidden;
- overflow-y: hidden;
+
 }
 #Title{
     width: 100%;
@@ -29,36 +29,39 @@
 #Title a{
     color: var(--Amarelo);
 }
-#Centralizar_Table{
+h2{
+    margin: 4vw 0vh 0vh 3vh;
+    font-size: 2vh;
+}
+.Centralizar_tables{
     width: 100vw;
-    height: 65vh;
-    margin-top: 5vh;
+    height: 30vh;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-#Tabela{
-    width: 90vw;
-    height: 65vh;
-    background-color: var(--Preto_Principal);
-    border-radius: 10px;
+.tabela{
+    width: 90%;
+    height: 90%;
 }
-#Tabela table{
+.tabela table{
     color: var(--Branco);
     background-color: var(--Preto_Principal);
     width: 100%;
     height: 100%;
-}#Tabela table td{
+}
+.tabela table td{
     border: 1px solid var(--Branco);
     color: var(--Branco);
     background-color: var(--Preto_Principal);
     text-align: center;
 }
-#Buttons{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.Buttons{
+display: flex;  
+align-items: center; 
+justify-content: space-between; 
 }
-#Buttom_Agendar button{
+.Button_Relatorio button{
     background-color: var(--Amarelo);
     color: var(--Branco);
     width: 9vw;
@@ -68,8 +71,9 @@
     border-radius: 10px;
     font-family: 'Inter', sans-serif;
     margin-top: 5vh;
+    margin-left: 5vw;
 }
-#Buttom_Remarcar button{
+.Button_Remarcar button{
     background-color: var(--Preto_Principal);
     color: var(--Branco);
     width: 9vw;
@@ -79,14 +83,6 @@
     border-radius: 10px;
     font-family: 'Inter', sans-serif;
     margin-top: 5vh;
+    margin-right: 5vw;
 }
-#Buttom_Desmarcar button{
-    background-color: var(--Preto_Principal);
-    color: var(--Branco);
-    width: 9vw;
-    height: 5vh;
-    border-color: var(--Amarelo);
-    border-radius: 10px;
-    font-family: 'Inter', sans-serif;
-    margin-top: 5vh;
-}
+

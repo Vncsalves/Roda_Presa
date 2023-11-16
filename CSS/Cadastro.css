@@ -85,7 +85,10 @@
     font-weight: normal;
 
 }
-#Bt_Cad button{
+#Bt_Cad{
+    background-color: transparent;
+}
+#Bt_Cad input{
     width: 9vw;
     height: 5vh;
     background-color: var(--Amarelo);

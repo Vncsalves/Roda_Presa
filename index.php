@@ -1,3 +1,35 @@
+ <?php
+ include('Config.php');
+
+ if(isset($_POST['Email_Cliente']) || isset($_POST['Senha_Cliente'])){
+    if(strlen($_POST['Email_Cliente'])==0){
+        echo "Preenchar seu E-mail";
+    }else if (strlen($_POST['Senha_Cliente'])== 0){
+        echo "Preencha sua senha";
+    }else{
+        $Email_Cliente = $conexao->real_escape_string($_POST['Email_Cliente']);
+        $Senha_Cliente = $conexao->real_escape_string($_POST['Senha_Cliente']);
+
+        $sql_code = "SELECT * FROM Clientes WHERE Email = '$Email_Cliente' AND Senha_Cliente ='$Senha_Cliente'";
+        $sql_query = $conexao->query($sql_code) or die("Falha ao executar:". $mysqli->error);
+
+        $Quantidade = $sql_query->num_rows;
+
+        if($Quantidade ==1){
+                $Usuario = $sql_query->fetch_assoc();
+
+                if(!isset($_SESSION)){
+                    session_start();
+                }
+                $_SESSION['Nome_Cliente'] = $Usuario['Nome_Cliente'];
+
+                header("Location: Tela_Cliente.php");
+        }else{
+            echo "Erro ao Entrar, Email ou Senha incorretos";
+        }
+    }
+ }
+  ?>
 <!DOCTYPE html>
 <html lang="PT-Br">
 <head>
@@ -33,22 +65,23 @@
     </div>
     <Div id="Formularios">
         <div class="Form_Cliente">
-            <form class="Forms" action="">
+            <form class="Forms" action="" method="POST">
                 <h1 class="Titulo_Form"> Login cliente</h1>
-                <p class="Escrita_Form">Email:</p>
-                <input class="Input_Email" type="email">
+                <p class="Escrita_Form" >Email:</p>
+                <input class="Input_Email" type="email" name='Email_Cliente'>
                 <p class="Escrita_Form">Senha:</p>
-                <input class="Input_Senha" type="search">
-            </form>
-            <div class="Bt_Form">
-            <a href="Tela_Cliente.html"><button id="Bt_Cliente">Entrar</button></a>
+                <input class="Input_Senha" type="search" name='Senha_Cliente'>
+                <div class="Bt_Form">
+                <input id="Bt_Cliente" type="submit" name="submit">
             </div>
             <div id="Esqueci_Senha_Cliente">
                 <p>Esqueci minha senha</p>
             </div>
             <div id="Cadastrar_Cliente">
-              <a href="Cadastro.html"><p>Cadastrar-se</p></a>
+              <a href="Cadastro.php"><p>Cadastrar-se</p></a>
             </div>
+            </form>
+           
         </div>
         <div class="Form_Adm">
             <form class="Forms" action="">
@@ -59,7 +92,7 @@
                 <input class="Input_Senha" type="search">
             </form>
             <div class="Bt_Form">
-           <a href="Tela_Adm"> <button id="Bt_Adm">Entrar</button></a>
+           <a href="Tela_Adm.php"> <button id="Bt_Adm">Entrar</button></a>
             </div>
             <div id="Esqueci_Senha">
                 <p>Esqueci minha senha</p>
