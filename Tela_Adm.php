@@ -1,3 +1,9 @@
+<?php
+include('Protecao.php');
+if(!isset($_SESSION)){
+    session_start();
+}
+?>
 <!DOCTYPE html>
 <html lang="PT-Br">
 <head>
@@ -8,8 +14,9 @@
 </head>
 <body>
     <header>
-        <div id="Title">
-      <h1><a href="index.php">Roda</a> Presa</h1>
+    <div id="Title">
+      <h1><a href="Sair.php">Roda </a>Presa</h1>
+      <h1>Olá, <?php echo $_SESSION['Nome_Adm'];?></h1>
     </div>
     </header>
     <h2>Serviços do Dia</h2>

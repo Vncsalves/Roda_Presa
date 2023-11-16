@@ -16,10 +16,11 @@
  overflow-y: hidden;
 }
 #Title{
-    width: 100%;
+    width: 95%;
     height: 4vh;
     display: flex;
     align-items: start;
+    justify-content: space-between;
     margin:2vh 0vh 0vh 2vh;
    
 }

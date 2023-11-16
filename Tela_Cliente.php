@@ -1,8 +1,8 @@
 <?php
+include('Protecao.php');
 if(!isset($_SESSION)){
     session_start();
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="PT-Br">
@@ -16,7 +16,7 @@ if(!isset($_SESSION)){
 <body>
     <header>
         <div id="Title">
-      <h1><a href="index.php">Roda</a> Presa</h1>
+      <h1><a href="Sair.php">Roda </a>Presa</h1>
       <h1>Olá, <?php echo $_SESSION['Nome_Cliente'];?></h1>
     </div>
     </header>

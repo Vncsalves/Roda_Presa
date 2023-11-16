@@ -21,11 +21,41 @@
                 if(!isset($_SESSION)){
                     session_start();
                 }
+                $_SESSION['Id_Cliente'] = $Id_Cliente['Id_Cliente'];
                 $_SESSION['Nome_Cliente'] = $Usuario['Nome_Cliente'];
 
                 header("Location: Tela_Cliente.php");
         }else{
             echo "Erro ao Entrar, Email ou Senha incorretos";
+        }
+    }
+ }
+ if(isset($_POST['CPF_Adm']) || isset($_POST['Senha_Adm'])){
+    if(strlen($_POST['CPF_Adm'])==0){
+        echo "Preenchar seu CPF";
+    }else if (strlen($_POST['Senha_Adm'])== 0){
+        echo "Preencha sua senha";
+    }else{
+        $CPF_Adm = $conexao->real_escape_string($_POST['CPF_Adm']);
+        $Senha_Adm = $conexao->real_escape_string($_POST['Senha_Adm']);
+
+        $sql_code = "SELECT * FROM Adm WHERE CPF = '$CPF_Adm' AND Senha_Adm ='$Senha_Adm'";
+        $sql_query = $conexao->query($sql_code) or die("Falha ao executar:". $mysqli->error);
+
+        $Quantidade = $sql_query->num_rows;
+
+        if($Quantidade ==1){
+                $Usuario = $sql_query->fetch_assoc();
+
+                if(!isset($_SESSION)){
+                    session_start();
+                }
+                $_SESSION['Id_Adm'] = $Id_Adm['Id_Adm'];
+                $_SESSION['Nome_Adm'] = $Usuario['Nome_Adm'];
+
+                header("Location: Tela_Adm.php");
+        }else{
+            echo "Erro ao Entrar, CPF ou Senha incorretos";
         }
     }
  }
@@ -84,19 +114,19 @@
            
         </div>
         <div class="Form_Adm">
-            <form class="Forms" action="">
+            <form class="Forms" action="" method="POST">
                 <h1 class="Titulo_Form"> Login Administrativo</h1>
                 <p class="Escrita_Form">CPF:</p>
-                <input class="Input_CPF" type="text">
+                <input class="Input_CPF" type="text" name='CPF_Adm'>
                 <p class="Escrita_Form">Senha:</p>
-                <input class="Input_Senha" type="search">
-            </form>
+                <input class="Input_Senha" type="search" name='Senha_Adm'>
             <div class="Bt_Form">
-           <a href="Tela_Adm.php"> <button id="Bt_Adm">Entrar</button></a>
+            <input id="Bt_Adm" type="submit" name="submit">
             </div>
             <div id="Esqueci_Senha">
                 <p>Esqueci minha senha</p>
             </div>
+            </form>
         </div>
     </Div>
 
