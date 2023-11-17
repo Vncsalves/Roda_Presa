@@ -18,7 +18,7 @@
 - PHP
 
 # 🐱‍👤 Como Rodar o Projeto
-É necessário baixar o XAMPP e colocar o projeto na pasta htdocs. Após isso, deve-se criar o banco de dados; seu script está presente no código do projeto. Por fim, é preciso ativar o MySQL no XAMPP, juntamente ao Apache, e pesquisar no navegador por http://localhost/Roda_Presa/index.php.
+É necessário baixar o XAMPP e colocar o projeto na pasta htdocs. Após isso, deve-se criar o banco de dados; seu script está presente no código do projeto. Por fim, é preciso ativar o MySQL no XAMPP, juntamente ao Apache, e pesquisar no navegador por http://localhost/Roda_Presa/index.php, Existe 1 Cliente padrao com email sendo Viniciusalvesdesantana05@gmail.com e senha "RodaPresa" utilizando ele você acessa a parte de cliente na qual consegue marcar horario, e ver os que já agendou, a parte de editar e excluir não consigui finalizalas.Como Usuarios Adms padrão temos 3 "Maria Eduarda" CPF "21659440823" e Senha "4002", "João Pedro" CPF"21659440572" Senha "8922" e por fim Thiago Gabriel CPF"12349440572" Senha "4022" na parte dos Adms infelizmente só temos o visual (Front-End) em vista do tempo não será possivel introduzir o Back_end
 
 # 🚨 Sobre o Roda Presa
 <p>Roda Presa trata-se de uma empresa fictícia que está implementando um novo sistema, no qual os clientes podem agendar horários e os administradores podem fazer alterações necessárias.</p>
