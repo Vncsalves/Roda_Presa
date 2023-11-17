@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['submit'])){
-    include_once('Config.php');
+    include('Config.php');
     $Nome= $_POST['Nome'];
     $Email= $_POST['Email'];
     $Senha= $_POST['Senha'];

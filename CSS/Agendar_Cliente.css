@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Raleway:wght@300&display=swap');
+:root{
+    --Preto_Fundo: #232526;
+    --Preto_Principal: #2A3033;
+    --Branco: #FFFF;
+    --Amarelo: #FFBA08;
+
+}
+*{
+ font-family: 'Inter', sans-serif;  
+ color: var(--Branco);
+ margin: 0;
+ padding: 0;
+ overflow-x: hidden;
+ overflow-y: hidden;
+}
+body{
+    background-color: var(--Preto_Fundo);
+}
+#Title{
+    width: 95%;
+    height: 4vh;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin:2vh 0vh 0vh 2vh;
+   
+}
+#Title h1{
+    font-size: 3vh;
+}
+#Title a{
+    color: var(--Amarelo);
+}
+.Box{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--Preto_Principal);
+    padding: 15px;
+    border-radius: 2vh;
+    width: 30vw;
+}
+fieldset{
+    border: 3px solid var(--Amarelo);
+}
+legend{
+    border: 1px solid var(--Amarelo);
+    padding: 10px;
+    text-align: center;
+    background-color: var(--Amarelo);
+    border-radius: 5px;
+    font-weight: bold;
+}
+.Input_Box{
+    position: relative;
+    background-color: var(--Preto_Principal);
+    margin-left: 1vh;
+}
+.Input_Box input{
+    background-color: var(--Preto_Principal)    ;
+    border-bottom: 1px solid var(--Branco);
+    outline: none;
+    color: var(--Branco);
+    font-size: 15px;
+    width: 95%;
+    letter-spacing: 3px;
+}
+#submit{
+    background-color: var(--Amarelo);
+    color: var(--Branco);
+    height: 5vh;
+    width: 95%;
+    margin-left: 1vh;
+    border-radius: 5px;
+    border: none;
+}

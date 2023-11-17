@@ -48,7 +48,19 @@
     background-color: var(--Preto_Principal);
     width: 100%;
     height: 100%;
-}#Tabela table td{
+}#Tabela table th{
+    border: 1px solid var(--Branco);
+    color: var(--Branco);
+    background-color: var(--Preto_Principal);
+    text-align: center;
+}
+#Tabela table tbody{
+    border: 1px solid var(--Branco);
+    color: var(--Branco);
+    background-color: var(--Preto_Principal);
+    text-align: center;
+}
+#Tabela table tbody td{
     border: 1px solid var(--Branco);
     color: var(--Branco);
     background-color: var(--Preto_Principal);
@@ -90,4 +102,8 @@
     border-radius: 10px;
     font-family: 'Inter', sans-serif;
     margin-top: 5vh;
+}
+.Img_Editar{
+    background: #FFBA08;
+    border-radius: 1vh;
 }

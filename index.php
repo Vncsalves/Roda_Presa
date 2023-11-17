@@ -21,7 +21,7 @@
                 if(!isset($_SESSION)){
                     session_start();
                 }
-                $_SESSION['Id_Cliente'] = $Id_Cliente['Id_Cliente'];
+                $_SESSION['Id_Cliente'] = $Usuario['Id_Cliente'];
                 $_SESSION['Nome_Cliente'] = $Usuario['Nome_Cliente'];
 
                 header("Location: Tela_Cliente.php");

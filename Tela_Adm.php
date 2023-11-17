@@ -11,6 +11,7 @@ if(!isset($_SESSION)){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adm</title>
     <link rel="stylesheet" href="CSS/Tela_Adm.css">
+    <link rel="shortcut icon" href="Assets/Icon.png" type="image/x-icon">
 </head>
 <body>
     <header>
